@@ -40,10 +40,10 @@
             <form method="POST" action="uloguj.php">
 
               <label for="username">Korisničko ime</label>
-              <input type="text" placeholder="Unesite username" id="username" name="username" class="form-control">
+              <input type="text" placeholder="Unesite korisnicko ime" id="username" name="username" class="form-control">
 			  <br>
               <label for="password">Šifra</label>
-              <input type="password" placeholder="Unesite password" id="password" name="password" class="form-control">
+              <input type="password" placeholder="Unesite sifru" id="password" name="password" class="form-control">
               <label for="submit"></label>
               <input type="submit" value="Uloguj se" id="submit" name="login" class=" btn btn-primary margin-top-10">
             </form>
