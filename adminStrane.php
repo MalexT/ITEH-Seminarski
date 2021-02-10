@@ -11,7 +11,7 @@
 	
 	
 
-    if($konekcija->query("INSERT INTO student(brojIndeksa,imePrezimeStudenta,brojTelefona,datumRodjenja) VALUES ('$broj','$student','$telefon','$datum')")){
+    if($konekcija->query("INSERT INTO kandidat(brojKandidata,imePrezimeKandidata,brojTelefona,datumRodjenja) VALUES ('$broj','$student','$telefon','$datum')")){
       $rezultat = "Uspešno unet kandidat";
     }else{
       $rezultat = "Neuspešno unet kandidat";
@@ -26,7 +26,7 @@
     $prID = $nizIDa[1];
     $rID = $nizIDa[2];
 
-    if($konekcija->query("UPDATE prijava set ocena =  $ocena where brojIndeksa = '$brIndeksa' and predmetID=$prID and rokID=$rID")){
+    if($konekcija->query("UPDATE prijava set brojPoena =  $ocena where brojIndeksa = '$brIndeksa' and predmetID=$prID and rokID=$rID")){
       $rezultatIzmena = "Uspešno promenjen broj poena";
     }else{
       $rezultatIzmena = "Neuspešno promenjen broj poena";
@@ -93,11 +93,11 @@
               <label for="prijava">Prijava</label>
               <select name="prijava" id="prijava" class="form-control" name="prijava">
                 <?php
-                    $q ="SELECT * FROM prijava p join predmet pre on p.predmetID = pre.predmetID join student s on p.brojIndeksa=s.brojIndeksa join rok r on p.rokID=r.rokID join sluzbenik sl on p.sluzbenikID = sl.sluzbenikID";
+                    $q ="SELECT * FROM prijava p join predmet pre on p.predmetID = pre.predmetID join kandidat k on p.brojKandidata=k.brojKandidata join rok r on p.rokID=r.rokID join instruktor sl on p.instruktorID = sl.instruktorID";
                     $rez = $konekcija->query($q);
                     while($row = $rez->fetch_assoc()){
                       ?>
-                      <option value="<?php echo $row['brojIndeksa'] ?>_<?php echo $row['predmetID'] ?>_<?php echo $row['rokID'] ?>"><?php echo $row['imePrezimeStudenta'] ?> - <?php echo $row['nazivPredmeta'] ?> - <?php echo $row['nazivRoka'] ?> - <?php echo $row['ocena'] ?> </option>
+                      <option value="<?php echo $row['brojKandidata'] ?>_<?php echo $row['predmetID'] ?>_<?php echo $row['rokID'] ?>"><?php echo $row['imePrezimeKandidata'] ?> - <?php echo $row['nazivPredmeta'] ?> - <?php echo $row['nazivRoka'] ?> - <?php echo $row['brojPoena'] ?> </option>
                       <?php
                     }
                  ?>
@@ -127,18 +127,18 @@
               </thead>
               <tbody>
                 <?php
-                    $rez = $konekcija->query("SELECT * FROM prijava p join predmet pre on p.predmetID = pre.predmetID join student s on p.brojIndeksa=s.brojIndeksa join rok r on p.rokID=r.rokID join sluzbenik sl on p.sluzbenikID = sl.sluzbenikID");
+                    $rez = $konekcija->query("SELECT * FROM prijava p join predmet pre on p.predmetID = pre.predmetID join kandidat k on p.brojKandidata=k.brojKandidata join rok r on p.rokID=r.rokID join instruktor iss on p.instruktorID = iss.instruktorID");
                     while($row = $rez->fetch_assoc()){
                       ?>
                       <tr>
-                        <td><?php echo $row['brojIndeksa'] ?></td>
-                        <td><?php echo $row['imePrezimeStudenta'] ?></td>
+                        <td><?php echo $row['brojKandidata'] ?></td>
+                        <td><?php echo $row['imePrezimeKandidata'] ?></td>
                         <td><?php echo $row['nazivPredmeta'] ?></td>
                         <td><?php echo $row['nazivRoka'] ?></td>
-                        <td><?php echo $row['ocena'] ?></td>
+                        <td><?php echo $row['brojPoena'] ?></td>
                         <td><?php echo $row['datumPrijave'] ?></td>
                         <td><?php echo $row['imePrezime'] ?></td>
-                        <td><a href="obrisiPrijavu.php?brojIndeksa=<?php echo $row['brojIndeksa'] ?>&predmetID=<?php echo $row['predmetID'] ?>&rokID=<?php echo $row['rokID'] ?>" class="btn btn-danger"><i class="fa fa-times"></i> Obrisi</a></td>
+                        <td><a href="obrisiPrijavu.php?brojIndeksa=<?php echo $row['brojKandidata'] ?>&predmetID=<?php echo $row['predmetID'] ?>&rokID=<?php echo $row['rokID'] ?>" class="btn btn-danger"><i class="fa fa-times"></i> Obrisi</a></td>
                       </tr>
 
                       <?php

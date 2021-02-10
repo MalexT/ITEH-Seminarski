@@ -11,7 +11,7 @@
                     <li><a href="unesiPrijavu.php">Nova prijava</a></li>
                     <li><a href="pretragaPoStudentu.php">Pretraga po kandidatima</a></li>
                     
-					<?php if($_SESSION['sluzbenik']->proveriSluzbenika()){
+					<?php if($_SESSION['sluzbenik']->proveriInstruktora()){
                       ?>
                       <li><a href="scrnsvr.php">Screen</a></li>
 					  

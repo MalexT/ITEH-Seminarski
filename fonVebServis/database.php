@@ -57,9 +57,9 @@ class Database {
 		}
 
 
-	function vratiStudente() {
+	function vratiKandidate() {
 	  $konekcija = new mysqli("localhost", "root", "", "sluzba");
-	  $q = 'SELECT * FROM student ';
+	  $q = 'SELECT * FROM kandidat ';
 	  $this ->result = $konekcija->query($q);
 	  $konekcija->close();
 	}

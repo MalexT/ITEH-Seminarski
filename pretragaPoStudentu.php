@@ -41,11 +41,11 @@
             <select name="rok" id="rok" class="form-control" onchange="pretraziPoStudentu(this.value)">
               <option value="0">Svi kandidati </option>
               <?php
-                  $q ="SELECT * FROM student";
+                  $q ="SELECT * FROM kandidat";
                   $rez = $konekcija->query($q);
                   while($row = $rez->fetch_assoc()){
                     ?>
-                    <option value="<?php echo $row['brojIndeksa'] ?>"><?php echo $row['imePrezimeStudenta'] ?> </option>
+                    <option value="<?php echo $row['brojKandidata'] ?>"><?php echo $row['imePrezimeKandidata'] ?> </option>
                     <?php
                   }
                ?>

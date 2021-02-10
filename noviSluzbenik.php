@@ -9,7 +9,7 @@
     $password = $_POST['password'];
    
 
-    if($konekcija->query("INSERT INTO sluzbenik(imePrezime,username,password,uloga) VALUES ('$imePrezime','$username','$password','1')")){
+    if($konekcija->query("INSERT INTO instruktor(imePrezime,username,password,uloga) VALUES ('$imePrezime','$username','$password','1')")){
       $rezultat = "Uspesno unet instruktor";
     }else{
       $rezultat = "Neuspesno unet instruktor";

@@ -12,7 +12,7 @@ Flight::route('GET /studenti', function()
 {
 	header("Content-Type: application/json; charset=utf-8");
 	$db = Flight::db();
-	$db->vratiStudente();
+	$db->vratiKandidate();
 
 	$niz =  [];
 	while ($red = $db->getResult()->fetch_object())

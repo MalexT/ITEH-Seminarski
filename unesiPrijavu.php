@@ -7,9 +7,10 @@
     $predmet = $_POST['predmet'];
     $student = $_POST['student'];
     $rok = $_POST['rok'];
-    $sluzbenik = $_SESSION['sluzbenik']->sluzbenikID;
+    $sluzbenik = $_SESSION['sluzbenik']->instruktorID;
 
-    if($konekcija->query("INSERT INTO prijava(rokID,predmetID,brojIndeksa,sluzbenikID) VALUES ($rok,$predmet,'$student',$sluzbenik)")){
+    if($konekcija->query("INSERT INTO prijava(rokID,predmetID,brojKandidata,instruktorID) VALUES ($rok,$predmet,'$student',$sluzbenik)")){
+      
       $rezultat = "Uspešno prijavljen";
     }else{
       $rezultat = "Neuspešno prijavljen";
@@ -84,7 +85,7 @@
                     curl_close($zahtev);
                         foreach($podaci as $row){
                           ?>
-                          <option value="<?php echo $row->brojIndeksa ?>"><?php echo $row->imePrezimeStudenta ?> </option>
+                          <option value="<?php echo $row->brojKandidata ?>"><?php echo $row->imePrezimeKandidata ?> </option>
                           <?php
                         }
                      ?>
@@ -108,6 +109,7 @@
                     <label for="submit"></label>
                     <input type="submit" value="Sačuvaj" name="sacuvaj" class="btn btn-primary margin-top-10">
               </form>
+              
             <div id="rezultat"><?php echo $rezultat; ?></div>
 
         </div>

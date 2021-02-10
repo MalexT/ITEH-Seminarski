@@ -1,15 +1,15 @@
 <?php
 
-class Sluzbenik{
-  public $sluzbenikID;
+class Instruktor{
+  public $instruktorID;
   public $imePrezime;
   public $username;
   public $password;
   public $uloga;
 
 
-  function __construct($sluzbenikID,$imePrezime,$username,$password,$uloga) {
-			$this->sluzbenikID = $sluzbenikID;
+  function __construct($instruktorID,$imePrezime,$username,$password,$uloga) {
+			$this->instruktorID = $instruktorID;
       $this->imePrezime = $imePrezime;
       $this->username = $username;
       $this->password = $password;
@@ -17,13 +17,13 @@ class Sluzbenik{
 		}
 
     public static function ulogujMe($konekcija,$username,$password){
-      $q = "SELECT * FROM sluzbenik s join uloga u on s.uloga = u.ulogaID where s.username='$username' AND s.password='$password' LIMIT 1";
+      $q = "SELECT * FROM instruktor i join uloga u on i.uloga = u.ulogaID where i.username='$username' AND i.password='$password' LIMIT 1";
       $r = $konekcija->query($q);
 
         while($row = $r->fetch_assoc()){
           $uloga = new Uloga($row['ulogaID'],$row['nazivUloge']);
-          $sluzbenik= new Sluzbenik($row['sluzbenikID'],$row['imePrezime'],$row['username'],$row['password'],$uloga);
-          $_SESSION['sluzbenik'] = $sluzbenik;
+          $instruktorID = new Instruktor($row['instruktorID'],$row['imePrezime'],$row['username'],$row['password'],$uloga);
+          $_SESSION['sluzbenik'] = $instruktorID;
           return true;
         }
 
@@ -31,7 +31,7 @@ class Sluzbenik{
     }
 
 
-	function proveriSluzbenika(){
+	function proveriInstruktora(){
 
       if($this->uloga != ""){
         if($this->uloga->ulogaID == "1"){
