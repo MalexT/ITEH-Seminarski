@@ -12,9 +12,9 @@
 	
 
     if($konekcija->query("INSERT INTO student(brojIndeksa,imePrezimeStudenta,brojTelefona,datumRodjenja) VALUES ('$broj','$student','$telefon','$datum')")){
-      $rezultat = "Uspešno unet student";
+      $rezultat = "Uspešno unet kandidat";
     }else{
-      $rezultat = "Neuspešno unet student";
+      $rezultat = "Neuspešno unet kandidat";
     }
   }
 
@@ -27,9 +27,9 @@
     $rID = $nizIDa[2];
 
     if($konekcija->query("UPDATE prijava set ocena =  $ocena where brojIndeksa = '$brIndeksa' and predmetID=$prID and rokID=$rID")){
-      $rezultatIzmena = "Uspešno promenjena ocena";
+      $rezultatIzmena = "Uspešno promenjen broj poena";
     }else{
-      $rezultatIzmena = "Neuspešno promenjena ocena";
+      $rezultatIzmena = "Neuspešno promenjen broj poena";
     }
   }
  ?>
@@ -38,7 +38,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Studentska služba Fakulteta organizacionih nauka</title>
+<title>Informacioni sistem za osposobjavanje kandidata za vozače</title>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -69,12 +69,12 @@
 
     <div class="about-block content content-center" id="about">
         <div class="container">
-            <h2><strong>Unos</strong> studenta</h2>
+            <h2><strong>Unos</strong> kandidata</h2>
             <form method="post" action="">
-              <label for="broj">Broj indeksa</label>
+              <label for="broj">Broj kandidata</label>
                 <input type="text" name="broj" id="broj" class="form-control">
 				<br>
-              <label for="student">Student</label>
+              <label for="student">Kandidat</label>
                 <input type="text" name="student" id="student" class="form-control">
 				<br>
                 <label for="telefon">Telefon</label>
@@ -88,7 +88,7 @@
 				<br>
               </form>
             <div id="rezultat"><?php echo $rezultat; ?></div>
-            <h2 class="margin-top-10"><strong>Izmena</strong> ocene</h2>
+            <h2 class="margin-top-10"><strong>Izmena</strong> poena</h2>
             <form method="post" action="">
               <label for="prijava">Prijava</label>
               <select name="prijava" id="prijava" class="form-control" name="prijava">
@@ -103,7 +103,7 @@
                  ?>
               </select>
 			  <br>
-                <label for="ocena">Ocena</label>
+                <label for="ocena">Poeni</label>
                   <input type="text" name="ocena" id="ocena" class="form-control">
 
                 <label for="submit"></label>
@@ -115,13 +115,13 @@
             <table id="prijave" class="table table-hover">
               <thead>
                 <tr>
-                  <th>Broj indeksa</th>
-                  <th>Student</th>
-                  <th>Predmet</th>
-                  <th>Rok</th>
-                  <th>Ocena</th>
+                  <th>Broj kandidata</th>
+                  <th>Kandidat</th>
+                  <th>Predmet polaganja</th>
+                  <th>Rok polaganja</th>
+                  <th>Poeni</th>
                   <th>Datum prijave</th>
-                  <th>Službenik</th>
+                  <th>Instruktor</th>
                   <th>Brisanje</th>
                 </tr>
               </thead>

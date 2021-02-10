@@ -21,7 +21,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Studentska služba Fakulteta organizacionih nauka</title>
+<title>Informacioni sistem za osposobjavanje kandidata za vozače</title>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -73,7 +73,7 @@
                       }
                    ?>
                 </select><br>
-                <label id="student">Student</label>
+                <label id="student">Kandidat</label>
                   <select name="student" id="student" class="form-control" name="student">
 				  
                     <?php
@@ -89,7 +89,7 @@
                         }
                      ?>
                   </select><br>
-                  <label id="predmet">Predmet</label>
+                  <label id="predmet">Predmet polaganja</label>
                     <select name="predmet" id="predmet" class="form-control" name="predmet">
 					
                       <?php

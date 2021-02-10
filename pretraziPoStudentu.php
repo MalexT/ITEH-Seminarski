@@ -15,13 +15,13 @@ if($id == "0"){
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Broj indeksa</th>
-      <th>Student</th>
-      <th>Predmet</th>
+      <th>Broj kandidata</th>
+      <th>Kandidat</th>
+      <th>Predmet polaganja</th>
       <th>Rok</th>
-      <th>Ocena</th>
+      <th>Poena</th>
       <th>Datum prijave</th>
-      <th>Službenik</th>
+      <th>Inspektor</th>
     </tr>
   </thead>
   <tbody>

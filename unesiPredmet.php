@@ -26,7 +26,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Studentska služba Fakulteta organizacionih nauka</title>
+<title>Informacioni sistem za osposobjavanje kandidata za vozače</title>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -55,10 +55,10 @@
 
     <div class="about-block content content-center" id="about">
         <div class="container">
-            <h2><strong>Unos</strong> predmeta</h2>
+            <h2><strong>Unos</strong> predmeta polaganja</h2>
             <form method="post" action="">
 
-                  <label id="predmet">Predmet</label>
+                  <label id="predmet">Predmet polaganja</label>
                     <input type="text" name="predmet" id="predmet" class="form-control">
                     <label for="submit"></label>
                     <input type="submit" value="Sacuvaj" name="sacuvaj" class="btn btn-primary margin-top-10">

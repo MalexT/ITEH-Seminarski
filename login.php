@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Studentska služba Fakulteta organizacionih nauka</title>
+<title>Informacioni sistem za osposobjavanje kandidata za vozače</title>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -36,13 +36,13 @@
             </div>
           <div class="col-md-6">
             <h2><strong>Login</strong> forma</h2>
-            <h4>Ulogujte se da biste nastavili da koristite aplikaciju</h4>
+            <h4>Ulogujte se da biste nastavili da koristite aplikaciju za vozače</h4>
             <form method="POST" action="uloguj.php">
 
-              <label for="username">Username</label>
+              <label for="username">Korisničko ime</label>
               <input type="text" placeholder="Unesite username" id="username" name="username" class="form-control">
 			  <br>
-              <label for="password">Password</label>
+              <label for="password">Šifra</label>
               <input type="password" placeholder="Unesite password" id="password" name="password" class="form-control">
               <label for="submit"></label>
               <input type="submit" value="Uloguj se" id="submit" name="login" class=" btn btn-primary margin-top-10">

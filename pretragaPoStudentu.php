@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Studentska služba Fakulteta organizacionih nauka</title>
+<title>Informacioni sistem za osposobjavanje kandidata za vozače</title>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -36,10 +36,10 @@
 
     <div class="about-block content content-center" id="about">
         <div class="container">
-            <h2><strong>Pretraga</strong> po studentima</h2>
-            <h4>Lista studenata</h4>
+            <h2><strong>Pretraga</strong> po kandidatima</h2>
+            <h4>Lista kandidata</h4>
             <select name="rok" id="rok" class="form-control" onchange="pretraziPoStudentu(this.value)">
-              <option value="0">Svi studenti </option>
+              <option value="0">Svi kandidati </option>
               <?php
                   $q ="SELECT * FROM student";
                   $rez = $konekcija->query($q);

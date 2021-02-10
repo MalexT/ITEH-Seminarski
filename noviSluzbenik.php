@@ -10,9 +10,9 @@
    
 
     if($konekcija->query("INSERT INTO sluzbenik(imePrezime,username,password,uloga) VALUES ('$imePrezime','$username','$password','1')")){
-      $rezultat = "Uspesno unet službenik";
+      $rezultat = "Uspesno unet instruktor";
     }else{
-      $rezultat = "Neuspesno unet službenik";
+      $rezultat = "Neuspesno unet instruktor";
     }
   }
 
@@ -25,7 +25,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Studentska služba Fakulteta organizacionih nauka</title>
+<title>Informacioni sistem za osposobjavanje kandidata za vozače</title>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -56,7 +56,7 @@
 
     <div class="about-block content content-center" id="about">
         <div class="container">
-            <h2><strong>Unos</strong> službenika</h2>
+            <h2><strong>Unos</strong> instruktora</h2>
             <form method="post" action="">
               <label for="imePrezime">Ime i prezime</label>
                 <input type="text" name="imePrezime" id="imePrezime" class="form-control">

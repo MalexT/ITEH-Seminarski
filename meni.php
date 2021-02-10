@@ -9,8 +9,8 @@
                 <ul class="header-navigation">
                     <li><a href="index.php">Pretraga prijava</a></li>
                     <li><a href="unesiPrijavu.php">Nova prijava</a></li>
-                    <li><a href="pretragaPoStudentu.php">Pretraga po studentu</a></li>
-                    <li><a href="unesiPredmet.php">Novi predmet</a></li>
+                    <li><a href="pretragaPoStudentu.php">Pretraga po kandidatima</a></li>
+                    
 					<?php if($_SESSION['sluzbenik']->proveriSluzbenika()){
                       ?>
                       <li><a href="scrnsvr.php">Screen</a></li>
@@ -19,12 +19,13 @@
                     } ?>
                     <?php if($_SESSION['sluzbenik']->proveriAdministratora()){
                       ?>
-                      <li><a href="adminStrane.php">Administracija</a></li>
-					  <li><a href="noviSluzbenik.php">Novi službenik</a></li>
+                      <li><a href="adminStrane.php">Admin</a></li>
+					  <li><a href="noviSluzbenik.php">Novi instruktor</a></li>
                       <?php
                     } ?>
+                    <li><a href="unesiPredmet.php">Novi predmet</a></li>
                     <li><a href="fajlovi.php">Dokumenti</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="logout.php">Izloguj se</a></li>
                 </ul>
             </div>
         </div>

@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Studentska služba Fakulteta organizacionih nauka</title>
+<title>Informacioni sistem za osposobjavanje kandidata za vozače</title>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -36,7 +36,7 @@
 
     <div class="about-block content content-center" id="about">
         <div class="container">
-            <h2><strong>Screen </strong> saver</h2>
+            <h2><strong>Pozadina </strong> ekrana</h2>
             <br>
             <img src="https://source.unsplash.com/random" class="img img-responsive">
 
