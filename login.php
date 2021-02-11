@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Informacioni sistem za osposobjavanje kandidata za vozače</title>
+<title>Informacioni sistem za osposobljavanje kandidata za vozače</title>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -15,7 +15,7 @@
 <meta content="" name="author">
 
 <link rel="shortcut icon" href="favicon.ico">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Pathway+Gothic+One|PT+Sans+Narrow:400+700|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="assets/pages/css/animate.css" rel="stylesheet">
@@ -24,18 +24,22 @@
 <link href="assets/pages/css/slider.css" rel="stylesheet">
 <link href="assets/onepage/css/style.css" rel="stylesheet">
 <link href="assets/onepage/css/style-responsive.css" rel="stylesheet">
-<link href="assets/onepage/css/themes/green.css" rel="stylesheet" id="style-color">
+<link href="assets/onepage/css/themes/red.css" rel="stylesheet" id="style-color">
 <link href="assets/onepage/css/custom.css" rel="stylesheet">
 </head>
 <body class="menu-always-on-top">
+<a class="scroll site-logo" href="#promo-block"><img src="assets/onepage/img/fonlogo.png" alt="L"></a>
 
     <div class="about-block content content-center" id="about">
         <div class="container">
+
           <div class="row">
+
             <div class="col-md-3">
             </div>
           <div class="col-md-6">
-            <h2><strong>Login</strong> forma</h2>
+          
+            <h2><strong><b>Login forma</b></strong></h2>
             <h4>Ulogujte se da biste nastavili da koristite aplikaciju za vozače</h4>
             <form method="POST" action="uloguj.php">
 
