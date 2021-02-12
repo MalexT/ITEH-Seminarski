@@ -5,11 +5,11 @@
 
   if(isset($_POST['sacuvaj'])){
     $predmet = $_POST['predmet'];
-    $student = $_POST['student'];
+    $kandidat = $_POST['kandidat'];
     $rok = $_POST['rok'];
-    $sluzbenik = $_SESSION['sluzbenik']->instruktorID;
+    $instruktor = $_SESSION['instruktor']->instruktorID;
 
-    if($konekcija->query("INSERT INTO prijava(rokID,predmetID,brojKandidata,instruktorID) VALUES ($rok,$predmet,'$student',$sluzbenik)")){
+    if($konekcija->query("INSERT INTO prijava(rokID,predmetID,brojKandidata,instruktorID) VALUES ($rok,$predmet,'$kandidat',$instruktor)")){
       
       $rezultat = "Uspešno prijavljen";
     }else{
@@ -57,16 +57,12 @@
                 <select name="rok" id="rok" class="form-control" name="rok">
 				
                   <?php
-                  $zahtev = curl_init("http://localhost/fonsluzba/fonVebServis/rokovi");
+                  $zahtev = curl_init("http://localhost/fonsluzba/vozacVebServis/rokovi");
             			curl_setopt($zahtev, CURLOPT_RETURNTRANSFER, true);
             			$json = curl_exec($zahtev);
             			$podaci = json_decode($json);
             			curl_close($zahtev);
 
-
-                      //$q ="SELECT * FROM rok";
-                      //$rez = $konekcija->query($q);
-                      //while($row = $rez->fetch_assoc()){
                       foreach($podaci as $row){
                         ?>
                         <option value="<?php echo $row->rokID ?>"><?php echo $row->nazivRoka ?> </option>
@@ -74,11 +70,11 @@
                       }
                    ?>
                 </select><br>
-                <label id="student">Kandidat</label>
-                  <select name="student" id="student" class="form-control" name="student">
+                <label id="kandidat">Kandidat</label>
+                  <select name="kandidat" id="kandidat" class="form-control" name="kandidat">
 				  
                     <?php
-                    $zahtev = curl_init("http://localhost/fonsluzba/fonVebServis/studenti");
+                    $zahtev = curl_init("http://localhost/fonsluzba/vozacVebServis/kandidati");
                     curl_setopt($zahtev, CURLOPT_RETURNTRANSFER, true);
                     $json = curl_exec($zahtev);
                     $podaci = json_decode($json);
@@ -94,7 +90,7 @@
                     <select name="predmet" id="predmet" class="form-control" name="predmet">
 					
                       <?php
-                      $zahtev = curl_init("http://localhost/fonsluzba/fonVebServis/predmeti");
+                      $zahtev = curl_init("http://localhost/fonsluzba/vozacVebServis/predmeti");
                       curl_setopt($zahtev, CURLOPT_RETURNTRANSFER, true);
                       $json = curl_exec($zahtev);
                       $podaci = json_decode($json);

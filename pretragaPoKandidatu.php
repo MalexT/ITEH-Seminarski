@@ -38,7 +38,7 @@
         <div class="container">
             <h2><strong><b>Pretraga po kandidatima</b></strong></h2>
             <h4>Lista kandidata</h4>
-            <select name="rok" id="rok" class="form-control" onchange="pretraziPoStudentu(this.value)">
+            <select name="rok" id="rok" class="form-control" onchange="pretraziPoKandidatu(this.value)">
               <option value="0">Svi kandidati </option>
               <?php
                   $q ="SELECT * FROM kandidat";
@@ -74,9 +74,9 @@
     });
 </script>
 <script>
-    function pretraziPoStudentu(id){
+    function pretraziPoKandidatu(id){
       $.ajax({
-        url: "pretraziPoStudentu.php",
+        url: "pretraziPoKandidatu.php",
         data: {id:id},
         success: function(tabela){
           $("#rezultat").html(tabela);
@@ -85,7 +85,7 @@
     }
 </script>
 <script>
-pretraziPoStudentu(0);
+pretraziPoKandidatu(0);
 </script>
 </body>
 </html>

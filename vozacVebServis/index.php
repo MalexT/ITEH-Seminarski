@@ -8,7 +8,7 @@ Flight::route('/', function(){
 	die("Izabereti neku od ruta...");
 });
 
-Flight::route('GET /studenti', function()
+Flight::route('GET /kandidati', function()
 {
 	header("Content-Type: application/json; charset=utf-8");
 	$db = Flight::db();

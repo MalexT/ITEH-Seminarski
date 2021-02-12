@@ -23,7 +23,7 @@ class Instruktor{
         while($row = $r->fetch_assoc()){
           $uloga = new Uloga($row['ulogaID'],$row['nazivUloge']);
           $instruktorID = new Instruktor($row['instruktorID'],$row['imePrezime'],$row['username'],$row['password'],$uloga);
-          $_SESSION['sluzbenik'] = $instruktorID;
+          $_SESSION['instruktor'] = $instruktorID;
           return true;
         }
 

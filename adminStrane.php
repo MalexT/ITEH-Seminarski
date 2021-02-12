@@ -138,7 +138,7 @@
                         <td><?php echo $row['brojPoena'] ?></td>
                         <td><?php echo $row['datumPrijave'] ?></td>
                         <td><?php echo $row['imePrezime'] ?></td>
-                        <td><a href="obrisiPrijavu.php?brojIndeksa=<?php echo $row['brojKandidata'] ?>&predmetID=<?php echo $row['predmetID'] ?>&rokID=<?php echo $row['rokID'] ?>" class="btn btn-danger"><i class="fa fa-times"></i> Obrisi</a></td>
+                        <td><a href="obrisiPrijavu.php?brojKandidata=<?php echo $row['brojKandidata'] ?>&predmetID=<?php echo $row['predmetID'] ?>&rokID=<?php echo $row['rokID'] ?>" class="btn btn-danger"><i class="fa fa-times"></i> Obrisi</a></td>
                       </tr>
 
                       <?php
@@ -199,7 +199,7 @@
       function drawChart() {
         var podaci;
         $.ajax({
-          url: "vratiPodatkeGrafik.php",
+          url: "vratiGrafickePodatke.php",
           success: function(json){
             podaci = JSON.parse(json);
             var data = google.visualization.arrayToDataTable(podaci);
