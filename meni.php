@@ -1,7 +1,7 @@
 <div class="header header-mobi-ext">
     <div class="container">
         <div class="row">
-        <a class="scroll site-logo" href="#promo-block"><img src="assets/onepage/img/fonlogo.png" alt="L"></a>
+        <a class="scroll site-logo" href="index.php"><img src="assets/onepage/img/logo.png" alt="L"></a>
             <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
             <div class="col-md-10 pull-left">
                 <ul class="header-navigation">

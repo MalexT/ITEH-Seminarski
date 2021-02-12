@@ -28,7 +28,7 @@
 <link href="assets/onepage/css/custom.css" rel="stylesheet">
 </head>
 <body class="menu-always-on-top">
-<a class="scroll site-logo" href="#promo-block"><img src="assets/onepage/img/fonlogo.png" alt="L"></a>
+<a class="scroll site-logo" href="#promo-block"><img src="assets/onepage/img/logo.png" alt="L"></a>
 
     <div class="about-block content content-center" id="about">
         <div class="container">
