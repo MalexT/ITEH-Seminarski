@@ -16,7 +16,7 @@
 <meta content="" name="keywords">
 <meta content="" name="author">
 
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="assets/onepage/img/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
